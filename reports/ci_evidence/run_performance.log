@@ -1,0 +1,3 @@
+performance : logreg
+performance : tree
+criteria_feed: {'latency_p95_ms_service': 9.881, 'latency_p95_ms_handler': 14.07, 'throughput_tx_s': 121583.962, 'model_size_mb': 0.005, 'rss_delta_mb': 65.809}

@@ -1,0 +1,2 @@
+Référence écrite : /home/claude/AI-TestGuard/baseline/baseline_full.json
+{'average_precision': 0.7648, 'roc_auc': 0.9831, 'recall': 0.8592, 'precision': 0.6703, 'fpr': 0.0007}

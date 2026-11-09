@@ -1,0 +1,7 @@
+OK   S1 Aucun secret dans le dépôt (motifs : clés AWS, jetons GitHub/Slack, clés privées
+OK   S2 .gitignore protège données, modèles, .env et kaggle.json
+OK   S3 Aucun fichier > 5 Mo hors data/ et models/
+OK   S4 Le jeu Kaggle (creditcard.csv) n'est pas suivi par Git
+OK   S5 Les journaux ne contiennent aucune valeur d'entrée (5 requêtes : valide, type in
+OK   S6 Un modèle altéré (1 octet) est refusé AVANT désérialisation (SHA-256)
+OK   S7 Un modèle sans fichier d'empreinte est refusé

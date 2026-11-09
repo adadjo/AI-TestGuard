@@ -1,0 +1,16 @@
+$ /usr/bin/python3 -m pytest -m slow or full_data --junitxml=/home/claude/AI-TestGuard/reports/junit_slow.xml -p no:cacheprovider
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0
+rootdir: /home/claude/AI-TestGuard
+configfile: pyproject.toml
+testpaths: tests
+plugins: hypothesis-6.170.14, cov-7.1.0
+collected 261 items / 254 deselected / 7 selected
+
+tests/test_full_data.py .....                                            [ 71%]
+tests/test_integration.py ..                                             [100%]
+
+----- generated xml file: /home/claude/AI-TestGuard/reports/junit_slow.xml -----
+====================== 7 passed, 254 deselected in 17.76s ======================
+
+[code de sortie : 0]

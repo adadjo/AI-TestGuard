@@ -1,0 +1,87 @@
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: lint (ruff)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Installer Ruff (version figée)
+        run: pip install "ruff==0.17.3"
+      - name: Ruff check
+        run: ruff check .
+      - name: Ruff format (contrôle sans modification)
+        run: ruff format --check .
+
+  tests:
+    name: tests (python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Tests rapides + couverture (échec si test en échec ou couverture < 85 %)
+        run: |
+          pytest -m "not slow and not full_data" \
+            --cov=app --cov-report=term-missing \
+            --cov-report=xml:reports/coverage.xml --cov-report=html:reports/htmlcov \
+            --cov-fail-under=85 --junitxml=reports/junit.xml
+      - name: Résumé dans l'onglet Actions
+        if: always()
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import os
+          import xml.etree.ElementTree as ET
+
+          path = "reports/junit.xml"
+          if os.path.exists(path):
+              root = ET.parse(path).getroot()
+              suite = root if root.tag == "testsuite" else root[0]
+              print(f"### Python ${{ matrix.python-version }} : {suite.get('tests')} tests, "
+                    f"{suite.get('failures')} échec(s), {suite.get('errors')} erreur(s), "
+                    f"{suite.get('skipped')} ignoré(s)")
+          else:
+              print("### Aucun rapport JUnit : échec avant l'exécution des tests")
+          PY
+      - name: Publier les preuves (JUnit, couverture)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preuves-tests-py${{ matrix.python-version }}
+          path: |
+            reports/junit.xml
+            reports/coverage.xml
+            reports/htmlcov
+          if-no-files-found: warn
+      - name: Signaler clairement l'échec
+        if: failure()
+        run: echo "::error title=Tests en échec::Un test, le seuil de couverture ou une barrière de non-régression a échoué."

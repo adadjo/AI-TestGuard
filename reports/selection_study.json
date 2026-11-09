@@ -1,0 +1,394 @@
+{
+  "rules": {
+    "R1": "meilleure PR-AUC de validation",
+    "R2": "meilleur rappel de validation au seuil FPR ≤ cible (égalité : PR-AUC)"
+  },
+  "params": {
+    "logreg": {
+      "C": 0.1,
+      "class_weight": null
+    },
+    "tree": {
+      "class_weight": "balanced",
+      "max_depth": 12,
+      "min_samples_leaf": 20
+    }
+  },
+  "rows": [
+    {
+      "seed": 42,
+      "logreg": {
+        "val_average_precision": 0.7648236605513667,
+        "val_recall": 0.8591549295774648,
+        "val_fpr": 0.0007060817171907362,
+        "test_recall": 0.8028169014084507,
+        "test_fpr": 0.0004236490303144417,
+        "test_precision": 0.76,
+        "test_average_precision": 0.6875176990098469,
+        "test_roc_auc": 0.9599704705355083,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.8084750850046559,
+        "val_recall": 0.8309859154929577,
+        "val_fpr": 0.00025889662963660327,
+        "test_recall": 0.676056338028169,
+        "test_fpr": 0.00021182451515722086,
+        "test_precision": 0.8421052631578947,
+        "test_average_precision": 0.7135286419812221,
+        "test_roc_auc": 0.9077555618023714,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "tree",
+      "R2_pick": "logreg",
+      "R3_pick": "logreg",
+      "R1_pick_passes": false,
+      "R2_pick_passes": true,
+      "R3_pick_passes": true
+    },
+    {
+      "seed": 0,
+      "logreg": {
+        "val_average_precision": 0.6988379613866067,
+        "val_recall": 0.7464788732394366,
+        "val_fpr": 0.0007766898889098098,
+        "test_recall": 0.8732394366197183,
+        "test_fpr": 0.0008237620033891923,
+        "test_precision": 0.6391752577319587,
+        "test_average_precision": 0.802488322485915,
+        "test_roc_auc": 0.9752261450457594,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.6625728662494001,
+        "val_recall": 0.7183098591549296,
+        "val_fpr": 0.0006119374882319714,
+        "test_recall": 0.8450704225352113,
+        "test_fpr": 0.0005177932592732065,
+        "test_precision": 0.7317073170731707,
+        "test_average_precision": 0.7791316975825464,
+        "test_roc_auc": 0.9362602133228669,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "logreg",
+      "R2_pick": "logreg",
+      "R3_pick": null,
+      "R1_pick_passes": true,
+      "R2_pick_passes": true,
+      "R3_pick_passes": false
+    },
+    {
+      "seed": 1,
+      "logreg": {
+        "val_average_precision": 0.6755592183675154,
+        "val_recall": 0.8169014084507042,
+        "val_fpr": 0.0006119374882319714,
+        "test_recall": 0.7464788732394366,
+        "test_fpr": 0.0003765769158350593,
+        "test_precision": 0.7681159420289855,
+        "test_average_precision": 0.7186559678374065,
+        "test_roc_auc": 0.9801113686449331,
+        "passes_ca01_ca05": false
+      },
+      "tree": {
+        "val_average_precision": 0.7449234220552314,
+        "val_recall": 0.8028169014084507,
+        "val_fpr": 0.0006354735454716626,
+        "test_recall": 0.7464788732394366,
+        "test_fpr": 0.0003765769158350593,
+        "test_precision": 0.7681159420289855,
+        "test_average_precision": 0.732247455174973,
+        "test_roc_auc": 0.8796748908059542,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "tree",
+      "R2_pick": "logreg",
+      "R3_pick": "logreg",
+      "R1_pick_passes": false,
+      "R2_pick_passes": false,
+      "R3_pick_passes": false
+    },
+    {
+      "seed": 2,
+      "logreg": {
+        "val_average_precision": 0.7413231861621202,
+        "val_recall": 0.8028169014084507,
+        "val_fpr": 0.0007060817171907362,
+        "test_recall": 0.8169014084507042,
+        "test_fpr": 0.0009649783468273394,
+        "test_precision": 0.5858585858585859,
+        "test_average_precision": 0.7440288280254076,
+        "test_roc_auc": 0.9728911029725709,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.7082264380334701,
+        "val_recall": 0.7605633802816901,
+        "val_fpr": 0.00021182451515722086,
+        "test_recall": 0.7183098591549296,
+        "test_fpr": 0.00021182451515722086,
+        "test_precision": 0.85,
+        "test_average_precision": 0.6925349295367613,
+        "test_roc_auc": 0.8934988437497513,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "logreg",
+      "R2_pick": "logreg",
+      "R3_pick": null,
+      "R1_pick_passes": true,
+      "R2_pick_passes": true,
+      "R3_pick_passes": false
+    },
+    {
+      "seed": 3,
+      "logreg": {
+        "val_average_precision": 0.8188867701030914,
+        "val_recall": 0.8450704225352113,
+        "val_fpr": 0.0007060817171907362,
+        "test_recall": 0.7746478873239436,
+        "test_fpr": 0.0008002259461495011,
+        "test_precision": 0.6179775280898876,
+        "test_average_precision": 0.6978607700815789,
+        "test_roc_auc": 0.9639517106404194,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.7651450612264221,
+        "val_recall": 0.8028169014084507,
+        "val_fpr": 0.0007060817171907362,
+        "test_recall": 0.7605633802816901,
+        "test_fpr": 0.0006119374882319714,
+        "test_precision": 0.675,
+        "test_average_precision": 0.7342360264592938,
+        "test_roc_auc": 0.900471317833569,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "logreg",
+      "R2_pick": "logreg",
+      "R3_pick": "logreg",
+      "R1_pick_passes": true,
+      "R2_pick_passes": true,
+      "R3_pick_passes": true
+    },
+    {
+      "seed": 4,
+      "logreg": {
+        "val_average_precision": 0.6970858367881992,
+        "val_recall": 0.7746478873239436,
+        "val_fpr": 0.000564865373752589,
+        "test_recall": 0.8169014084507042,
+        "test_fpr": 0.0003059687441159857,
+        "test_precision": 0.8169014084507042,
+        "test_average_precision": 0.7801033887933981,
+        "test_roc_auc": 0.9658037662995483,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.697823193302338,
+        "val_recall": 0.7746478873239436,
+        "val_fpr": 0.0007766898889098098,
+        "test_recall": 0.7887323943661971,
+        "test_fpr": 0.0006119374882319714,
+        "test_precision": 0.6829268292682927,
+        "test_average_precision": 0.753124140875155,
+        "test_roc_auc": 0.9080683261686481,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "tree",
+      "R2_pick": "tree",
+      "R3_pick": "logreg",
+      "R1_pick_passes": false,
+      "R2_pick_passes": false,
+      "R3_pick_passes": true
+    },
+    {
+      "seed": 5,
+      "logreg": {
+        "val_average_precision": 0.6963153274556656,
+        "val_recall": 0.7323943661971831,
+        "val_fpr": 0.0004236490303144417,
+        "test_recall": 0.7887323943661971,
+        "test_fpr": 0.0004236490303144417,
+        "test_precision": 0.7567567567567568,
+        "test_average_precision": 0.7730729658641345,
+        "test_roc_auc": 0.9898493294544143,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.696013225617564,
+        "val_recall": 0.7605633802816901,
+        "val_fpr": 0.00040011297307475054,
+        "test_recall": 0.7887323943661971,
+        "test_fpr": 0.00047072114479382413,
+        "test_precision": 0.7368421052631579,
+        "test_average_precision": 0.7084787151989904,
+        "test_roc_auc": 0.900957287691504,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "logreg",
+      "R2_pick": "tree",
+      "R3_pick": null,
+      "R1_pick_passes": true,
+      "R2_pick_passes": false,
+      "R3_pick_passes": false
+    },
+    {
+      "seed": 6,
+      "logreg": {
+        "val_average_precision": 0.7107024606035973,
+        "val_recall": 0.7887323943661971,
+        "val_fpr": 0.00044718508755413295,
+        "test_recall": 0.7746478873239436,
+        "test_fpr": 0.00040011297307475054,
+        "test_precision": 0.7638888888888888,
+        "test_average_precision": 0.77897521318236,
+        "test_roc_auc": 0.9838294027012764,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.6998215971642565,
+        "val_recall": 0.7464788732394366,
+        "val_fpr": 0.0003059687441159857,
+        "test_recall": 0.7464788732394366,
+        "test_fpr": 0.00023536057239691206,
+        "test_precision": 0.8412698412698413,
+        "test_average_precision": 0.7294340597026302,
+        "test_roc_auc": 0.9145853278208131,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "logreg",
+      "R2_pick": "logreg",
+      "R3_pick": "logreg",
+      "R1_pick_passes": true,
+      "R2_pick_passes": true,
+      "R3_pick_passes": true
+    },
+    {
+      "seed": 7,
+      "logreg": {
+        "val_average_precision": 0.7346850572762749,
+        "val_recall": 0.7746478873239436,
+        "val_fpr": 0.0007766898889098098,
+        "test_recall": 0.8169014084507042,
+        "test_fpr": 0.0006354735454716626,
+        "test_precision": 0.6823529411764706,
+        "test_average_precision": 0.7776018152595747,
+        "test_roc_auc": 0.9846004571961993,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.7146282188933805,
+        "val_recall": 0.7183098591549296,
+        "val_fpr": 0.0006354735454716626,
+        "test_recall": 0.7746478873239436,
+        "test_fpr": 0.000682545659951045,
+        "test_precision": 0.6547619047619048,
+        "test_average_precision": 0.7580824131545051,
+        "test_roc_auc": 0.8938515531145828,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "logreg",
+      "R2_pick": "logreg",
+      "R3_pick": "logreg",
+      "R1_pick_passes": true,
+      "R2_pick_passes": true,
+      "R3_pick_passes": true
+    },
+    {
+      "seed": 8,
+      "logreg": {
+        "val_average_precision": 0.8601666681036361,
+        "val_recall": 0.9295774647887324,
+        "val_fpr": 0.0007766898889098098,
+        "test_recall": 0.7887323943661971,
+        "test_fpr": 0.0006119374882319714,
+        "test_precision": 0.6829268292682927,
+        "test_average_precision": 0.7032208632943548,
+        "test_roc_auc": 0.9647151407787716,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.8622181003034951,
+        "val_recall": 0.8732394366197183,
+        "val_fpr": 0.0003059687441159857,
+        "test_recall": 0.7323943661971831,
+        "test_fpr": 0.00018828845791752966,
+        "test_precision": 0.8666666666666667,
+        "test_average_precision": 0.7452884610619807,
+        "test_roc_auc": 0.9007953529878197,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "tree",
+      "R2_pick": "logreg",
+      "R3_pick": "logreg",
+      "R1_pick_passes": false,
+      "R2_pick_passes": true,
+      "R3_pick_passes": true
+    },
+    {
+      "seed": 9,
+      "logreg": {
+        "val_average_precision": 0.7085022292042208,
+        "val_recall": 0.8450704225352113,
+        "val_fpr": 0.0007531538316701186,
+        "test_recall": 0.8309859154929577,
+        "test_fpr": 0.0007296177744304275,
+        "test_precision": 0.6555555555555556,
+        "test_average_precision": 0.8257370374880261,
+        "test_roc_auc": 0.9843246543846017,
+        "passes_ca01_ca05": true
+      },
+      "tree": {
+        "val_average_precision": 0.6848922108475054,
+        "val_recall": 0.7746478873239436,
+        "val_fpr": 0.0007531538316701186,
+        "test_recall": 0.8309859154929577,
+        "test_fpr": 0.0005413293165128977,
+        "test_precision": 0.7195121951219512,
+        "test_average_precision": 0.799539224332211,
+        "test_roc_auc": 0.9220858714705858,
+        "passes_ca01_ca05": false
+      },
+      "R1_pick": "logreg",
+      "R2_pick": "logreg",
+      "R3_pick": "logreg",
+      "R1_pick_passes": true,
+      "R2_pick_passes": true,
+      "R3_pick_passes": true
+    }
+  ],
+  "reference_seed": 42,
+  "summary": {
+    "R1": {
+      "picks": {
+        "logreg": 7,
+        "tree": 3,
+        "None": 0
+      },
+      "pick_passes": 7,
+      "n": 10
+    },
+    "R2": {
+      "picks": {
+        "logreg": 8,
+        "tree": 2,
+        "None": 0
+      },
+      "pick_passes": 7,
+      "n": 10
+    },
+    "R3": {
+      "picks": {
+        "logreg": 7,
+        "tree": 0,
+        "None": 3
+      },
+      "pick_passes": 6,
+      "n": 10
+    },
+    "model_passes": {
+      "logreg": 9,
+      "tree": 0
+    }
+  }
+}

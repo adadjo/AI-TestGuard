@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "id": "S1",
+      "check": "Aucun secret dans le dépôt (motifs : clés AWS, jetons GitHub/Slack, clés privées, clé Kaggle, affectations password/token/api_key)",
+      "result": true,
+      "detail": "0 détection(s)"
+    },
+    {
+      "id": "S2",
+      "check": ".gitignore protège données, modèles, .env et kaggle.json",
+      "result": true,
+      "detail": "entrées manquantes : []"
+    },
+    {
+      "id": "S3",
+      "check": "Aucun fichier > 5 Mo hors data/ et models/",
+      "result": true,
+      "detail": "0 fichier(s)"
+    },
+    {
+      "id": "S4",
+      "check": "Le jeu Kaggle (creditcard.csv) n'est pas suivi par Git",
+      "result": true,
+      "detail": "dépôt Git non initialisé ici : contrôlé par .gitignore (S2)"
+    },
+    {
+      "id": "S5",
+      "check": "Les journaux ne contiennent aucune valeur d'entrée (5 requêtes : valide, type invalide, champ inconnu, montant négatif, JSON tronqué)",
+      "result": true,
+      "detail": "7 lignes de journal examinées ; fuites : []"
+    },
+    {
+      "id": "S6",
+      "check": "Un modèle altéré (1 octet) est refusé AVANT désérialisation (SHA-256)",
+      "result": true,
+      "detail": "ModelIntegrityError levée"
+    },
+    {
+      "id": "S7",
+      "check": "Un modèle sans fichier d'empreinte est refusé",
+      "result": true,
+      "detail": "ModelIntegrityError levée"
+    }
+  ],
+  "findings": [],
+  "criteria_feed": {
+    "secrets_found": 0,
+    "sensitive_values_in_logs": 0
+  },
+  "residual_risks": [
+    "joblib/pickle : l'empreinte SHA-256 protège contre l'altération accidentelle ou le remplacement du seul fichier ; un attaquant qui remplace aussi le fichier d'empreinte la contourne (prévoir signature/HMAC et un magasin d'artefacts de confiance).",
+    "Aucun audit des dépendances (pip-audit) n'a pu être exécuté : accès réseau restreint ; à ajouter en CI.",
+    "Pas d'API HTTP déployée : authentification, TLS, limitation de débit et journalisation d'accès non évalués."
+  ]
+}

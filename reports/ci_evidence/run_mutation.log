@@ -1,0 +1,27 @@
+Contrôle à vide : suite verte sur le code non muté
+M01 tué        Borne basse de Amount décalée (−1 au lieu de 0)                -> tests/test_preprocessing.py::test_validate_amount_boundaries
+M02 tué        Contrôle des valeurs infinies désactivé                        -> tests/test_preprocessing.py::test_validate_rejects_infinite_values[inf]
+M03 tué        Contrôle des colonnes obligatoires désactivé                   -> tests/test_integration.py::test_load_data_reports_every_file_problem_explicitly
+M04 tué        Partition sans stratification (premier découpage)              -> tests/test_regression.py::test_current_code_matches_the_frozen_ci_baseline
+M05 tué        FUITE : seuil réglé sur le jeu de TEST                         -> tests/test_integration.py::test_end_to_end_run_uses_each_partition_only_for_its_role
+M06 tué        FUITE : entraînement sur train + validation                    -> tests/test_integration.py::test_pipeline_fit_never_sees_validation_or_test_rows
+M07 tué        Contrainte de FPR doublée dans la sélection du seuil           -> tests/test_evaluation.py::test_select_threshold_respects_the_fpr_constraint_and_maximises_recall
+M08 tué        Règle de décision « p ≥ seuil » devenue « p > seuil »          -> tests/test_prediction.py::test_threshold_boundary_is_inclusive
+M09 tué        Contrôle de sortie « p ≤ 1 » supprimé                          -> tests/test_prediction.py::test_predict_fraud_detects_model_contract_violations[above-1]
+M10 tué        Formule de la précision erronée (FN au lieu de FP)             -> tests/test_regression.py::test_current_code_matches_the_frozen_ci_baseline
+M11 tué        FPR calculé sur l'ensemble au lieu des négatifs                -> tests/test_evaluation.py::test_evaluate_model_matches_hand_computation
+M12 tué        Tolérance de rejet multipliée par 10                           -> tests/test_regression.py::test_large_degradation_is_rejected
+M13 tué        Écrasement de la référence autorisé sans décision              -> tests/test_regression.py::test_write_baseline_refuses_to_overwrite_an_existing_reference
+M14 tué        Vérification d'intégrité SHA-256 désactivée                    -> tests/test_integration.py::test_reload_detects_a_tampered_artifact_before_deserialising
+M15 tué        Champs supplémentaires acceptés par le gestionnaire            -> tests/test_prediction.py::test_handler_rejects_unexpected_fields_without_echoing_their_names
+M16 tué        Colonne entièrement manquante supprimée (dimensions changées)  -> tests/test_preprocessing.py::test_preprocessor_keeps_dimensions_when_a_training_column_is_entirely_missing
+M17 tué        Signe du PSI inversé                                           -> tests/test_monitoring.py::test_psi_detects_mean_shift_and_scale_change
+M18 tué        Amplitude du bruit ignorée (toujours 1 σ)                      -> tests/test_robustness.py::test_zero_perturbation_changes_nothing
+M19 SURVIVANT  Plancher à 0 retiré avant log1p (défense en profondeur)        -> None
+M20 tué        Plafond de Amount rendu inopérant                              -> tests/test_preprocessing.py::test_validate_amount_boundaries
+M21 SURVIVANT  Limite de valeurs manquantes : > devenu ≥ (cas limite)         -> None
+M22 tué        Intervalle de Wilson remplacé par celui de Wald                -> tests/test_evaluation.py::test_wilson_interval_known_values
+M23 SURVIVANT  Alerte sur le taux de transactions signalées désactivée        -> None
+M24 tué        Dédoublonnage supprimant aussi l'original                      -> tests/test_integration.py::test_deduplicate_removes_exact_duplicates_so_none_cross_partitions
+M25 tué        Limite de taille de requête rendue inopérante                  -> tests/test_prediction.py::test_handler_rejects_oversized_payload
+Score de mutation : 22/25  survivants : ['M19', 'M21', 'M23']

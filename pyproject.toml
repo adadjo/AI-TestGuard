@@ -1,0 +1,40 @@
+[project]
+name = "ai-testguard"
+version = "1.0.0"
+description = "Test logiciel et assurance qualité d'un modèle de détection de fraude bancaire"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers --strict-config"
+markers = [
+    "slow: tests longs (> 5 s), exécutés manuellement ou sur calendrier",
+    "full_data: nécessitent data/creditcard.csv (jeu Kaggle non versionné)",
+]
+filterwarnings = [
+    "error::RuntimeWarning",
+    "error::sklearn.exceptions.ConvergenceWarning",
+]
+
+[tool.coverage.run]
+source = ["app"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["data", "models", "reports"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4", "RUF"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003", "RUF012"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*" = ["E402"]
+"tests/*" = ["B011"]

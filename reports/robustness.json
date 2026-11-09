@@ -1,0 +1,1125 @@
+{
+  "protocol": {
+    "eps_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.25
+    ],
+    "n_seeds": 5,
+    "moderate": 0.05,
+    "sigma_reference": "écart-type des composantes V sur l'entraînement"
+  },
+  "models": {
+    "logreg": {
+      "threshold": 0.03186407586247419,
+      "noise": {
+        "0.01": {
+          "mean_abs_dp": {
+            "mean": 4.916267002663246e-06,
+            "std": 1.4593222694598012e-07
+          },
+          "p99_abs_dp": {
+            "mean": 3.636914577613146e-05,
+            "std": 7.422770768339701e-07
+          },
+          "max_abs_dp": {
+            "mean": 0.0055118904149759505,
+            "std": 0.0010761944228736549
+          },
+          "flip_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_flips": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_fpr": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_average_precision": {
+            "mean": 0.00016992873939059017,
+            "std": 0.00020444877973216136
+          },
+          "n_invalid": 0
+        },
+        "0.05": {
+          "mean_abs_dp": {
+            "mean": 2.4606080253172432e-05,
+            "std": 7.294844458095101e-07
+          },
+          "p99_abs_dp": {
+            "mean": 0.00018251463329835356,
+            "std": 3.7621002827088826e-06
+          },
+          "max_abs_dp": {
+            "mean": 0.027434717466099535,
+            "std": 0.00517261536031645
+          },
+          "flip_rate": {
+            "mean": 1.879743415023849e-05,
+            "std": 1.9658827193638843e-05
+          },
+          "n_flips": {
+            "mean": 0.8,
+            "std": 0.8366600265340756
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": -0.007948051948051949,
+            "std": 0.008273756791329098
+          },
+          "delta_fpr": {
+            "mean": 1.8828845791752973e-05,
+            "std": 1.9691678274667567e-05
+          },
+          "delta_average_precision": {
+            "mean": 0.0009703412113972077,
+            "std": 0.0011468967060089912
+          },
+          "n_invalid": 0
+        },
+        "0.1": {
+          "mean_abs_dp": {
+            "mean": 4.935241658319404e-05,
+            "std": 1.4592754878080051e-06
+          },
+          "p99_abs_dp": {
+            "mean": 0.0003662205994209196,
+            "std": 7.487013277011973e-06
+          },
+          "max_abs_dp": {
+            "mean": 0.05458931483874663,
+            "std": 0.010002978030565664
+          },
+          "flip_rate": {
+            "mean": 3.2895509762917366e-05,
+            "std": 1.286972338412947e-05
+          },
+          "n_flips": {
+            "mean": 1.4,
+            "std": 0.5477225575051661
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": -0.013896103896103896,
+            "std": 0.005334959975699657
+          },
+          "delta_fpr": {
+            "mean": 3.29504801355677e-05,
+            "std": 1.2891229464911632e-05
+          },
+          "delta_average_precision": {
+            "mean": 0.0003606236451874301,
+            "std": 0.0019016296633118674
+          },
+          "n_invalid": 0
+        },
+        "0.25": {
+          "mean_abs_dp": {
+            "mean": 0.0001257809259830411,
+            "std": 3.6530095985462785e-06
+          },
+          "p99_abs_dp": {
+            "mean": 0.0009592607520387851,
+            "std": 2.1037162828965394e-05
+          },
+          "max_abs_dp": {
+            "mean": 0.13393110158165578,
+            "std": 0.023098349732129916
+          },
+          "flip_rate": {
+            "mean": 8.928781221363286e-05,
+            "std": 3.06360694809683e-05
+          },
+          "n_flips": {
+            "mean": 3.8,
+            "std": 1.3038404810405297
+          },
+          "delta_recall": {
+            "mean": -0.01408450704225359,
+            "std": 0.009959250439247174
+          },
+          "delta_precision": {
+            "mean": -0.030797623429202402,
+            "std": 0.009292689347084382
+          },
+          "delta_fpr": {
+            "mean": 6.590096027113538e-05,
+            "std": 1.9691678274667567e-05
+          },
+          "delta_average_precision": {
+            "mean": -0.002142565992566836,
+            "std": 0.002994461905098914
+          },
+          "n_invalid": 0
+        }
+      },
+      "families": {
+        "V1-V28 seulement": {
+          "mean_abs_dp": {
+            "mean": 2.457523493353526e-05,
+            "std": 9.306708707056708e-07
+          },
+          "p99_abs_dp": {
+            "mean": 0.0001821408813881878,
+            "std": 5.17804339617447e-06
+          },
+          "max_abs_dp": {
+            "mean": 0.030904452089988328,
+            "std": 0.005949671698869087
+          },
+          "flip_rate": {
+            "mean": 2.819615122535774e-05,
+            "std": 3.06360694809683e-05
+          },
+          "n_flips": {
+            "mean": 1.2,
+            "std": 1.3038404810405297
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": 5.4054054054053505e-05,
+            "std": 0.007167004991985831
+          },
+          "delta_fpr": {
+            "mean": 1.0842021724855045e-20,
+            "std": 1.6642505676580386e-05
+          },
+          "delta_average_precision": {
+            "mean": 0.0013595660906938535,
+            "std": 0.0009034113400559976
+          },
+          "n_invalid": 0
+        },
+        "Amount seulement": {
+          "mean_abs_dp": {
+            "mean": 6.297279361041939e-07,
+            "std": 1.2545930719606971e-08
+          },
+          "p99_abs_dp": {
+            "mean": 4.1326949164501786e-06,
+            "std": 6.815706677832618e-08
+          },
+          "max_abs_dp": {
+            "mean": 0.0006007117997853916,
+            "std": 4.017928859064908e-05
+          },
+          "flip_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_flips": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_fpr": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_average_precision": {
+            "mean": 7.937606460015623e-05,
+            "std": 0.00023117802593525114
+          },
+          "n_invalid": 0
+        }
+      },
+      "missing": [
+        {
+          "fraction": 0.01,
+          "realized_max_column_fraction": 0.011184473319391902,
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 1,
+          "flip_rate": 4.699358537559623e-05,
+          "delta_recall": -0.014084507042253613,
+          "delta_precision": -0.013333333333333308,
+          "delta_fpr": 2.353605723969123e-05
+        },
+        {
+          "fraction": 0.03,
+          "realized_max_column_fraction": 0.03141521182358608,
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 1,
+          "flip_rate": 9.398717075119246e-05,
+          "delta_recall": -0.014084507042253613,
+          "delta_precision": -0.013333333333333308,
+          "delta_fpr": 2.353605723969123e-05
+        },
+        {
+          "fraction": 0.05,
+          "realized_max_column_fraction": 0.05199840221809723,
+          "outcome": "rejeté",
+          "error": "DataValidationError",
+          "message": "Taux de valeurs manquantes > 5% pour : ['Amount', 'V11', 'V12', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20"
+        },
+        {
+          "fraction": 0.1,
+          "realized_max_column_fraction": 0.10174111233816584,
+          "outcome": "rejeté",
+          "error": "DataValidationError",
+          "message": "Taux de valeurs manquantes > 5% pour : ['Amount', 'V1', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17'"
+        }
+      ],
+      "extreme_amount": [
+        {
+          "scenario": "1 % des montants × 10",
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 0,
+          "max_abs_dp": 0.0021449302197914175,
+          "flip_rate": 0.0,
+          "delta_recall": 0.0,
+          "delta_fpr": 0.0
+        },
+        {
+          "scenario": "20 montants = 50 000 (> seuil d'alerte 30 000)",
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 1,
+          "max_abs_dp": 0.0018129863725944405,
+          "flip_rate": 0.0,
+          "delta_recall": 0.0,
+          "delta_fpr": 0.0
+        },
+        {
+          "scenario": "1 montant = 1 000 000 000 (hors contrat)",
+          "outcome": "rejeté",
+          "error": "DataValidationError",
+          "message": "Amount > 1000000 : hors contrat."
+        }
+      ],
+      "invalid_batch": [
+        {
+          "case": "Valeur +inf dans V1",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Valeur −inf dans Amount",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Type texte dans V3",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Type booléen dans V4",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Colonne V5 absente",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Colonne inattendue",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Colonne V6 dupliquée",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Amount négatif",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Amount > 1 000 000",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "|V8| > 1 000",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Time négatif",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Taux de NaN de 20 % dans V9",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Jeu vide",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Entrée non DataFrame (liste)",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        }
+      ],
+      "invalid_requests": [
+        {
+          "case": "Champ V7 manquant",
+          "expected_status": 422,
+          "status": 422,
+          "error": "missing_fields",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Champ supplémentaire",
+          "expected_status": 422,
+          "status": 422,
+          "error": "unexpected_fields",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Type texte (V3)",
+          "expected_status": 422,
+          "status": 422,
+          "error": "invalid_types",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Valeur nulle (V3)",
+          "expected_status": 422,
+          "status": 422,
+          "error": "invalid_types",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Booléen (V3)",
+          "expected_status": 422,
+          "status": 422,
+          "error": "invalid_types",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Constante NaN",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Constante Infinity",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Dépassement 1e999",
+          "expected_status": 422,
+          "status": 422,
+          "error": "non_finite_values",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Amount négatif",
+          "expected_status": 422,
+          "status": 422,
+          "error": "contract_violation",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "JSON invalide",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Corps vide",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Charge utile = liste",
+          "expected_status": 400,
+          "status": 400,
+          "error": "payload_must_be_object",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Charge utile trop grande",
+          "expected_status": 413,
+          "status": 413,
+          "error": "payload_too_large",
+          "accepted_wrongly": false,
+          "as_expected": true
+        }
+      ],
+      "invalid_inputs_accepted": 0,
+      "status_mismatches": 0,
+      "shift": [
+        {
+          "scenario": "V1-V28 : +0,5 σ",
+          "max_feature_psi": 1.8890128695205597,
+          "n_features_alert": 27,
+          "score_psi": 0.683079319100114,
+          "detected": true,
+          "flip_rate": 0.0001644775488145868,
+          "delta_recall": -0.04225352112676062,
+          "delta_precision": 0.034117647058823475,
+          "delta_fpr": -9.414422895876481e-05,
+          "delta_average_precision": 0.0
+        },
+        {
+          "scenario": "V1-V28 : +1 σ",
+          "max_feature_psi": 4.220046302197089,
+          "n_features_alert": 28,
+          "score_psi": 2.218810568244288,
+          "detected": true,
+          "flip_rate": 0.00023496792687798115,
+          "delta_recall": -0.05633802816901412,
+          "delta_precision": 0.055384615384615365,
+          "delta_fpr": -0.00014121634343814722,
+          "delta_average_precision": 0.0
+        },
+        {
+          "scenario": "8 composantes V : +1 σ",
+          "max_feature_psi": 3.9890367465208536,
+          "n_features_alert": 8,
+          "score_psi": 1.8754901186561381,
+          "detected": true,
+          "flip_rate": 0.00023496792687798115,
+          "delta_recall": -0.05633802816901412,
+          "delta_precision": 0.055384615384615365,
+          "delta_fpr": -0.00014121634343814722,
+          "delta_average_precision": 0.0
+        },
+        {
+          "scenario": "Amount × 2",
+          "max_feature_psi": 0.19355098784156083,
+          "n_features_alert": 0,
+          "score_psi": 0.0014295774790666544,
+          "detected": false,
+          "flip_rate": 2.3496792687798115e-05,
+          "delta_recall": 0.0,
+          "delta_precision": -0.010000000000000009,
+          "delta_fpr": 2.353605723969123e-05,
+          "delta_average_precision": 0.00015196051831445345
+        },
+        {
+          "scenario": "Amount × 5",
+          "max_feature_psi": 1.1061076682900841,
+          "n_features_alert": 1,
+          "score_psi": 0.009612469138481579,
+          "detected": true,
+          "flip_rate": 2.3496792687798115e-05,
+          "delta_recall": 0.0,
+          "delta_precision": -0.010000000000000009,
+          "delta_fpr": 2.353605723969123e-05,
+          "delta_average_precision": 6.46139986401062e-05
+        }
+      ],
+      "time_invariance_changed_rows": 0
+    },
+    "tree": {
+      "threshold": 0.9987250415702227,
+      "noise": {
+        "0.01": {
+          "mean_abs_dp": {
+            "mean": 0.0006652014679347728,
+            "std": 0.0001062316150567094
+          },
+          "p99_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "max_abs_dp": {
+            "mean": 0.9897991773993209,
+            "std": 0.005166452306506922
+          },
+          "flip_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_flips": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_fpr": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_average_precision": {
+            "mean": 0.0005189955656431433,
+            "std": 0.0007263941739817035
+          },
+          "n_invalid": 0
+        },
+        "0.05": {
+          "mean_abs_dp": {
+            "mean": 0.002322864094008115,
+            "std": 0.0001270426391123592
+          },
+          "p99_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "max_abs_dp": {
+            "mean": 0.9977306136166877,
+            "std": 0.0010338789766342368
+          },
+          "flip_rate": {
+            "mean": 4.699358537559623e-06,
+            "std": 1.0508085140627316e-05
+          },
+          "n_flips": {
+            "mean": 0.2,
+            "std": 0.44721359549995804
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": -0.0029038112522685954,
+            "std": 0.0064931193539013695
+          },
+          "delta_fpr": {
+            "mean": 4.707211447938241e-06,
+            "std": 1.0525644782055119e-05
+          },
+          "delta_average_precision": {
+            "mean": -0.007460341890365774,
+            "std": 0.005384985361380067
+          },
+          "n_invalid": 0
+        },
+        "0.1": {
+          "mean_abs_dp": {
+            "mean": 0.003639322778947429,
+            "std": 0.00011081612934943362
+          },
+          "p99_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "max_abs_dp": {
+            "mean": 0.998581834471923,
+            "std": 0.0007327919840215014
+          },
+          "flip_rate": {
+            "mean": 1.879743415023849e-05,
+            "std": 1.9658827193638843e-05
+          },
+          "n_flips": {
+            "mean": 0.8,
+            "std": 0.8366600265340756
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": 0.00010370754472388555,
+            "std": 0.010450818763408648
+          },
+          "delta_fpr": {
+            "mean": 0.0,
+            "std": 1.6642505676580386e-05
+          },
+          "delta_average_precision": {
+            "mean": -0.016709915096156935,
+            "std": 0.005967292124442533
+          },
+          "n_invalid": 0
+        },
+        "0.25": {
+          "mean_abs_dp": {
+            "mean": 0.007028412740458155,
+            "std": 0.0003623904892505378
+          },
+          "p99_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "max_abs_dp": {
+            "mean": 0.9991169900713996,
+            "std": 0.0
+          },
+          "flip_rate": {
+            "mean": 6.579101952583473e-05,
+            "std": 3.4851375676569764e-05
+          },
+          "n_flips": {
+            "mean": 2.8,
+            "std": 1.4832396974191326
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": -0.016738397718433974,
+            "std": 0.02540555454947482
+          },
+          "delta_fpr": {
+            "mean": 2.8243268687629455e-05,
+            "std": 4.210257912822049e-05
+          },
+          "delta_average_precision": {
+            "mean": -0.04626491555983718,
+            "std": 0.01243516862753421
+          },
+          "n_invalid": 0
+        }
+      },
+      "families": {
+        "V1-V28 seulement": {
+          "mean_abs_dp": {
+            "mean": 0.002236008115408022,
+            "std": 0.00015353795853979076
+          },
+          "p99_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "max_abs_dp": {
+            "mean": 0.9980466788724461,
+            "std": 0.0005983221494848007
+          },
+          "flip_rate": {
+            "mean": 4.699358537559623e-06,
+            "std": 1.0508085140627316e-05
+          },
+          "n_flips": {
+            "mean": 0.2,
+            "std": 0.447213595499958
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": -0.0029038112522685954,
+            "std": 0.0064931193539013695
+          },
+          "delta_fpr": {
+            "mean": 4.707211447938241e-06,
+            "std": 1.0525644782055119e-05
+          },
+          "delta_average_precision": {
+            "mean": -0.00694345369984053,
+            "std": 0.005057317193538269
+          },
+          "n_invalid": 0
+        },
+        "Amount seulement": {
+          "mean_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "p99_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "max_abs_dp": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "flip_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_flips": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_recall": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_precision": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_fpr": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "delta_average_precision": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "n_invalid": 0
+        }
+      },
+      "missing": [
+        {
+          "fraction": 0.01,
+          "realized_max_column_fraction": 0.011184473319391902,
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 1,
+          "flip_rate": 7.049037806339435e-05,
+          "delta_recall": -0.028169014084507005,
+          "delta_precision": 0.00974658869395717,
+          "delta_fpr": -2.3536057239691204e-05
+        },
+        {
+          "fraction": 0.03,
+          "realized_max_column_fraction": 0.03141521182358608,
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 1,
+          "flip_rate": 0.00011748396343899057,
+          "delta_recall": -0.05633802816901412,
+          "delta_precision": 0.004048582995951455,
+          "delta_fpr": -2.3536057239691204e-05
+        },
+        {
+          "fraction": 0.05,
+          "realized_max_column_fraction": 0.05199840221809723,
+          "outcome": "rejeté",
+          "error": "DataValidationError",
+          "message": "Taux de valeurs manquantes > 5% pour : ['Amount', 'V11', 'V12', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20"
+        },
+        {
+          "fraction": 0.1,
+          "realized_max_column_fraction": 0.10174111233816584,
+          "outcome": "rejeté",
+          "error": "DataValidationError",
+          "message": "Taux de valeurs manquantes > 5% pour : ['Amount', 'V1', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17'"
+        }
+      ],
+      "extreme_amount": [
+        {
+          "scenario": "1 % des montants × 10",
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 0,
+          "max_abs_dp": 0.0,
+          "flip_rate": 0.0,
+          "delta_recall": 0.0,
+          "delta_fpr": 0.0
+        },
+        {
+          "scenario": "20 montants = 50 000 (> seuil d'alerte 30 000)",
+          "outcome": "traité",
+          "valid_probabilities": true,
+          "n_warnings": 1,
+          "max_abs_dp": 0.0,
+          "flip_rate": 0.0,
+          "delta_recall": 0.0,
+          "delta_fpr": 0.0
+        },
+        {
+          "scenario": "1 montant = 1 000 000 000 (hors contrat)",
+          "outcome": "rejeté",
+          "error": "DataValidationError",
+          "message": "Amount > 1000000 : hors contrat."
+        }
+      ],
+      "invalid_batch": [
+        {
+          "case": "Valeur +inf dans V1",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Valeur −inf dans Amount",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Type texte dans V3",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Type booléen dans V4",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Colonne V5 absente",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Colonne inattendue",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Colonne V6 dupliquée",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Amount négatif",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Amount > 1 000 000",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "|V8| > 1 000",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Time négatif",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Taux de NaN de 20 % dans V9",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Jeu vide",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        },
+        {
+          "case": "Entrée non DataFrame (liste)",
+          "accepted_wrongly": false,
+          "error": "DataValidationError"
+        }
+      ],
+      "invalid_requests": [
+        {
+          "case": "Champ V7 manquant",
+          "expected_status": 422,
+          "status": 422,
+          "error": "missing_fields",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Champ supplémentaire",
+          "expected_status": 422,
+          "status": 422,
+          "error": "unexpected_fields",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Type texte (V3)",
+          "expected_status": 422,
+          "status": 422,
+          "error": "invalid_types",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Valeur nulle (V3)",
+          "expected_status": 422,
+          "status": 422,
+          "error": "invalid_types",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Booléen (V3)",
+          "expected_status": 422,
+          "status": 422,
+          "error": "invalid_types",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Constante NaN",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Constante Infinity",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Dépassement 1e999",
+          "expected_status": 422,
+          "status": 422,
+          "error": "non_finite_values",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Amount négatif",
+          "expected_status": 422,
+          "status": 422,
+          "error": "contract_violation",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "JSON invalide",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Corps vide",
+          "expected_status": 400,
+          "status": 400,
+          "error": "invalid_json",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Charge utile = liste",
+          "expected_status": 400,
+          "status": 400,
+          "error": "payload_must_be_object",
+          "accepted_wrongly": false,
+          "as_expected": true
+        },
+        {
+          "case": "Charge utile trop grande",
+          "expected_status": 413,
+          "status": 413,
+          "error": "payload_too_large",
+          "accepted_wrongly": false,
+          "as_expected": true
+        }
+      ],
+      "invalid_inputs_accepted": 0,
+      "status_mismatches": 0,
+      "shift": [
+        {
+          "scenario": "V1-V28 : +0,5 σ",
+          "max_feature_psi": 1.8890128695205597,
+          "n_features_alert": 27,
+          "score_psi": 0.00010684468881336844,
+          "detected": true,
+          "flip_rate": 7.049037806339435e-05,
+          "delta_recall": -0.014084507042253502,
+          "delta_precision": 0.02826510721247566,
+          "delta_fpr": -4.707211447938241e-05,
+          "delta_average_precision": -0.057890438406732025
+        },
+        {
+          "scenario": "V1-V28 : +1 σ",
+          "max_feature_psi": 4.220046302197089,
+          "n_features_alert": 28,
+          "score_psi": 0.0026314102511956904,
+          "detected": true,
+          "flip_rate": 0.0002819615122535774,
+          "delta_recall": -0.14084507042253525,
+          "delta_precision": 0.002339181286549752,
+          "delta_fpr": -4.707211447938241e-05,
+          "delta_average_precision": -0.09696186422146591
+        },
+        {
+          "scenario": "8 composantes V : +1 σ",
+          "max_feature_psi": 3.9890367465208536,
+          "n_features_alert": 8,
+          "score_psi": 0.00012260939445546564,
+          "detected": true,
+          "flip_rate": 0.00011748396343899057,
+          "delta_recall": -0.05633802816901412,
+          "delta_precision": 0.004048582995951455,
+          "delta_fpr": -2.3536057239691204e-05,
+          "delta_average_precision": -0.023779366857436313
+        },
+        {
+          "scenario": "Amount × 2",
+          "max_feature_psi": 0.19355098784156083,
+          "n_features_alert": 0,
+          "score_psi": 3.737143318865249e-07,
+          "detected": false,
+          "flip_rate": 0.0,
+          "delta_recall": 0.0,
+          "delta_precision": 0.0,
+          "delta_fpr": 0.0,
+          "delta_average_precision": 0.00021440065084121773
+        },
+        {
+          "scenario": "Amount × 5",
+          "max_feature_psi": 1.1061076682900841,
+          "n_features_alert": 1,
+          "score_psi": 1.1510159324386729e-05,
+          "detected": true,
+          "flip_rate": 0.0,
+          "delta_recall": 0.0,
+          "delta_precision": 0.0,
+          "delta_fpr": 0.0,
+          "delta_average_precision": -0.003383403808145946
+        }
+      ],
+      "time_invariance_changed_rows": 0
+    }
+  },
+  "selected": "logreg",
+  "criteria_feed": {
+    "perturbation_flip_rate": 1.879743415023849e-05,
+    "perturbation_recall_drop": 0.0,
+    "invalid_inputs_accepted": 0
+  },
+  "figures": {
+    "noise": "reports/figures/fig_robustness_noise.png",
+    "shift": "reports/figures/fig_robustness_shift.png"
+  }
+}

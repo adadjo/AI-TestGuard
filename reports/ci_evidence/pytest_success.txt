@@ -1,0 +1,48 @@
+$ /usr/bin/python3 -m pytest -m not slow and not full_data --cov=app --cov-report=term-missing --cov-report=json:/home/claude/AI-TestGuard/reports/coverage.json --junitxml=/home/claude/AI-TestGuard/reports/junit.xml -p no:cacheprovider --cov-fail-under=85
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0
+rootdir: /home/claude/AI-TestGuard
+configfile: pyproject.toml
+testpaths: tests
+plugins: hypothesis-6.170.14, cov-7.1.0
+collected 261 items / 7 deselected / 254 selected
+
+tests/test_ci_config.py ........                                         [  3%]
+tests/test_evaluation.py .........................................       [ 19%]
+tests/test_integration.py ........................                       [ 28%]
+tests/test_monitoring.py ...........                                     [ 33%]
+tests/test_performance.py ....                                           [ 34%]
+tests/test_prediction.py ............................................... [ 53%]
+                                                                         [ 53%]
+tests/test_preprocessing.py ............................................ [ 70%]
+...                                                                      [ 71%]
+tests/test_regression.py .....................                           [ 79%]
+tests/test_robustness.py ..................                              [ 87%]
+tests/test_security.py ........                                          [ 90%]
+tests/test_traceability.py .........................                     [100%]
+
+------- generated xml file: /home/claude/AI-TestGuard/reports/junit.xml --------
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                   Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------
+app/__init__.py            1      0      0      0   100%
+app/config.py             32      0      0      0   100%
+app/evaluation.py        157      2     60      2    98%   31, 190
+app/monitoring.py         69      1     22      2    97%   120, 127->140
+app/prediction.py         76      0     22      0   100%
+app/preprocessing.py     146      2     58      1    99%   68, 282
+app/regression.py         67      1     24      1    98%   75
+app/robustness.py         58      0      4      0   100%
+app/security.py           38      1     20      1    97%   55
+app/synthetic.py          29      1      4      1    94%   70
+app/training.py          170      3     46      5    96%   200, 257->265, 264, 270, 344->348
+app/utils.py              66     10     22      6    82%   45-46, 67-68, 83, 89, 91, 93, 98, 100
+------------------------------------------------------------------
+TOTAL                    909     21    282     19    97%
+Coverage JSON written to file /home/claude/AI-TestGuard/reports/coverage.json
+Required test coverage of 85% reached. Total coverage: 96.64%
+====================== 254 passed, 7 deselected in 10.91s ======================
+
+[code de sortie : 0]

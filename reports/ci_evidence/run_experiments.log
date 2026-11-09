@@ -1,0 +1,14 @@
+[01:41:35] Source : Credit Card Fraud Detection (Kaggle, mlg-ulb / ULB) — 284807 lignes
+[01:41:36] Dédoublonnage : 1081 lignes retirées (19 fraudes) -> 283726 lignes, 473 fraudes
+[01:41:37] Réglage + évaluation : logreg
+[01:41:43]   logreg: params={'C': 0.1, 'class_weight': None} seuil=0.031864 | test: rappel=0.803 préc=0.760 FPR=0.00042 AP=0.688 AUC=0.960
+[01:41:43] Réglage + évaluation : tree
+[01:43:24]   tree: params={'class_weight': 'balanced', 'max_depth': 12, 'min_samples_leaf': 20} seuil=0.998725 | test: rappel=0.676 préc=0.842 FPR=0.00021 AP=0.714 AUC=0.908
+[01:43:24] Bootstrap stratifié (1000 rééchantillons)
+[01:44:00] Modèle retenu : logreg
+[01:44:09] Reproductibilité : 0.00e+00 | rechargement : 0.00e+00 | inter-processus : True
+[01:44:11] Sensibilité aux graines : logreg
+[01:44:22] Sensibilité aux graines : tree
+[01:45:41] Partition temporelle et ablation de Time
+[01:46:04] Figures
+[01:46:07] Terminé en 276 s -> reports/results.json

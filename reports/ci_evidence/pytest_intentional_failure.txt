@@ -1,0 +1,52 @@
+$ pytest -q -m 'not slow and not full_data'   # mutant M05 : FUITE : seuil réglé sur le jeu de TEST
+          set(run.provenance[k]) for k in ("fit_index", "threshold_index", "test_index")
+        )
+        assert fit == set(s.X_train.index)
+        assert thr == set(s.X_val.index)
+        assert not (fit & test) and not (thr & test)
+    
+        proba_val = run.pipeline.predict_proba(s.X_val)[:, 1]
+>       assert select_threshold(s.y_val, proba_val, FIXTURE_MAX_FPR).threshold == run.threshold
+E       AssertionError: assert 0.9991150980427511 == 0.9999789747609236
+E        +  where 0.9991150980427511 = ThresholdChoice(threshold=0.9991150980427511, fpr=0.0, recall=0.7777777777777778, precision=1.0, n_alerts=14).threshold
+E        +    where ThresholdChoice(threshold=0.9991150980427511, fpr=0.0, recall=0.7777777777777778, precision=1.0, n_alerts=14) = select_threshold(118     0\n2644    0\n3910    0\n2639    0\n4277    0\n       ..\n3375    0\n3687    0\n4364    0\n1897    0\n4609    0\nName: Class, Length: 901, dtype: int64, array([6.73794426e-02, 4.35619696e-05, 2.35564392e-02, 4.48114991e-02,\n       9.51103010e-03, 1.79795178e-04, 4.443781...495e-05, 1.46424437e-03,\n       6.95566148e-02, 1.89375280e-05, 2.58914360e-05, 7.07193096e-06,\n       2.67354396e-07]), 0.01)
+E        +      where 118     0\n2644    0\n3910    0\n2639    0\n4277    0\n       ..\n3375    0\n3687    0\n4364    0\n1897    0\n4609    0\nName: Class, Length: 901, dtype: int64 = Splits(X_train=          Time        V1        V2  ...       V27       V28  Amount\n3933  114546.0  2.312772 -1.939336 ...1087    0\n5555    0\n       ..\n1351    1\n2740    0\n5645    0\n5195    0\n2523    0\nName: Class, Length: 900, dtype: int64).y_val
+E        +  and   0.9999789747609236 = PipelineRun(model_name='logreg', pipeline=Pipeline(steps=[('preprocess',\n                 ColumnTransformer(transforme..., 'specificity': 1.0, 'mcc': 0.8474379452360686, 'roc_auc': 0.90803728898967, 'average_precision': 0.7538556434122674}).threshold
+
+tests/test_integration.py:120: AssertionError
+_______________ test_current_code_matches_the_frozen_ci_baseline _______________
+
+    def test_current_code_matches_the_frozen_ci_baseline():
+        record, measured = _ci_run()
+        result = compare_to_baseline(measured, record["validation_metrics"], record["tolerances"])
+>       assert result["decision"] == DECISION_ACCEPT, result["reasons"]
+E       AssertionError: ['precision : dégradation de 0.1906 (fail).', 'fpr : dégradation de 0.0024 (fail).']
+E       assert 'REJETER' == 'ACCEPTER'
+E         
+E         - ACCEPTER
+E         + REJETER
+
+tests/test_regression.py:177: AssertionError
+_______________ test_neutral_refactoring_is_accepted_by_the_gate _______________
+
+    def test_neutral_refactoring_is_accepted_by_the_gate():
+        record, measured = _ci_run(overrides={"max_iter": 5000})
+>       assert (
+            compare_to_baseline(measured, record["validation_metrics"], record["tolerances"])[
+                "decision"
+            ]
+            == DECISION_ACCEPT
+        )
+E       AssertionError: assert 'REJETER' == 'ACCEPTER'
+E         
+E         - ACCEPTER
+E         + REJETER
+
+tests/test_regression.py:189: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_integration.py::test_end_to_end_run_uses_each_partition_only_for_its_role
+FAILED tests/test_regression.py::test_current_code_matches_the_frozen_ci_baseline
+FAILED tests/test_regression.py::test_neutral_refactoring_is_accepted_by_the_gate
+3 failed, 251 passed, 7 deselected in 6.60s
+
+[code de sortie : 1]

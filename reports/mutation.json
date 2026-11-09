@@ -1,0 +1,293 @@
+{
+  "mutants": [
+    {
+      "id": "M01",
+      "file": "app/preprocessing.py",
+      "description": "Borne basse de Amount décalée (−1 au lieu de 0)",
+      "category": "Contrat de données",
+      "killed": true,
+      "first_failing_test": "tests/test_preprocessing.py::test_validate_amount_boundaries",
+      "seconds": 5.436776821999985,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M02",
+      "file": "app/preprocessing.py",
+      "description": "Contrôle des valeurs infinies désactivé",
+      "category": "Contrat de données",
+      "killed": true,
+      "first_failing_test": "tests/test_preprocessing.py::test_validate_rejects_infinite_values[inf]",
+      "seconds": 5.705774904000009,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M03",
+      "file": "app/preprocessing.py",
+      "description": "Contrôle des colonnes obligatoires désactivé",
+      "category": "Contrat de données",
+      "killed": true,
+      "first_failing_test": "tests/test_integration.py::test_load_data_reports_every_file_problem_explicitly",
+      "seconds": 4.132362822000005,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M04",
+      "file": "app/preprocessing.py",
+      "description": "Partition sans stratification (premier découpage)",
+      "category": "Partition",
+      "killed": true,
+      "first_failing_test": "tests/test_regression.py::test_current_code_matches_the_frozen_ci_baseline",
+      "seconds": 5.693113193999977,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M05",
+      "file": "app/training.py",
+      "description": "FUITE : seuil réglé sur le jeu de TEST",
+      "category": "Fuite de données",
+      "killed": true,
+      "first_failing_test": "tests/test_integration.py::test_end_to_end_run_uses_each_partition_only_for_its_role",
+      "seconds": 12.903492169000003,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M06",
+      "file": "app/training.py",
+      "description": "FUITE : entraînement sur train + validation",
+      "category": "Fuite de données",
+      "killed": true,
+      "first_failing_test": "tests/test_integration.py::test_pipeline_fit_never_sees_validation_or_test_rows",
+      "seconds": 5.331730275000012,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M07",
+      "file": "app/training.py",
+      "description": "Contrainte de FPR doublée dans la sélection du seuil",
+      "category": "Seuil de décision",
+      "killed": true,
+      "first_failing_test": "tests/test_evaluation.py::test_select_threshold_respects_the_fpr_constraint_and_maximises_recall",
+      "seconds": 2.2896944729999973,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M08",
+      "file": "app/prediction.py",
+      "description": "Règle de décision « p ≥ seuil » devenue « p > seuil »",
+      "category": "Prédiction",
+      "killed": true,
+      "first_failing_test": "tests/test_prediction.py::test_threshold_boundary_is_inclusive",
+      "seconds": 5.20254529799999,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M09",
+      "file": "app/prediction.py",
+      "description": "Contrôle de sortie « p ≤ 1 » supprimé",
+      "category": "Prédiction",
+      "killed": true,
+      "first_failing_test": "tests/test_prediction.py::test_predict_fraud_detects_model_contract_violations[above-1]",
+      "seconds": 5.394183803000004,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M10",
+      "file": "app/evaluation.py",
+      "description": "Formule de la précision erronée (FN au lieu de FP)",
+      "category": "Métriques",
+      "killed": true,
+      "first_failing_test": "tests/test_regression.py::test_current_code_matches_the_frozen_ci_baseline",
+      "seconds": 6.004474291999998,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M11",
+      "file": "app/evaluation.py",
+      "description": "FPR calculé sur l'ensemble au lieu des négatifs",
+      "category": "Métriques",
+      "killed": true,
+      "first_failing_test": "tests/test_evaluation.py::test_evaluate_model_matches_hand_computation",
+      "seconds": 2.3262855989999878,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M12",
+      "file": "app/regression.py",
+      "description": "Tolérance de rejet multipliée par 10",
+      "category": "Non-régression",
+      "killed": true,
+      "first_failing_test": "tests/test_regression.py::test_large_degradation_is_rejected",
+      "seconds": 6.143691437000001,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M13",
+      "file": "app/regression.py",
+      "description": "Écrasement de la référence autorisé sans décision",
+      "category": "Non-régression",
+      "killed": true,
+      "first_failing_test": "tests/test_regression.py::test_write_baseline_refuses_to_overwrite_an_existing_reference",
+      "seconds": 5.827783699999998,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M14",
+      "file": "app/training.py",
+      "description": "Vérification d'intégrité SHA-256 désactivée",
+      "category": "Sécurité",
+      "killed": true,
+      "first_failing_test": "tests/test_integration.py::test_reload_detects_a_tampered_artifact_before_deserialising",
+      "seconds": 3.655400797999988,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M15",
+      "file": "app/prediction.py",
+      "description": "Champs supplémentaires acceptés par le gestionnaire",
+      "category": "Sécurité",
+      "killed": true,
+      "first_failing_test": "tests/test_prediction.py::test_handler_rejects_unexpected_fields_without_echoing_their_names",
+      "seconds": 5.233596449000004,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M16",
+      "file": "app/training.py",
+      "description": "Colonne entièrement manquante supprimée (dimensions changées)",
+      "category": "Prétraitement",
+      "killed": true,
+      "first_failing_test": "tests/test_preprocessing.py::test_preprocessor_keeps_dimensions_when_a_training_column_is_entirely_missing",
+      "seconds": 5.696341523000001,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M17",
+      "file": "app/monitoring.py",
+      "description": "Signe du PSI inversé",
+      "category": "Surveillance",
+      "killed": true,
+      "first_failing_test": "tests/test_monitoring.py::test_psi_detects_mean_shift_and_scale_change",
+      "seconds": 3.7016070630000115,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M18",
+      "file": "app/robustness.py",
+      "description": "Amplitude du bruit ignorée (toujours 1 σ)",
+      "category": "Robustesse",
+      "killed": true,
+      "first_failing_test": "tests/test_robustness.py::test_zero_perturbation_changes_nothing",
+      "seconds": 7.01512896600002,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M19",
+      "file": "app/training.py",
+      "description": "Plancher à 0 retiré avant log1p (défense en profondeur)",
+      "category": "Prétraitement",
+      "killed": true,
+      "first_failing_test": null,
+      "seconds": 7.293976457000014,
+      "killed_initial": false,
+      "killed_after_strengthening": true,
+      "first_failing_test_after": "tests/test_preprocessing.py::test_amount_transform_clips_negative_values_before_the_logarithm"
+    },
+    {
+      "id": "M20",
+      "file": "app/preprocessing.py",
+      "description": "Plafond de Amount rendu inopérant",
+      "category": "Contrat de données",
+      "killed": true,
+      "first_failing_test": "tests/test_preprocessing.py::test_validate_amount_boundaries",
+      "seconds": 5.285233010999974,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M21",
+      "file": "app/preprocessing.py",
+      "description": "Limite de valeurs manquantes : > devenu ≥ (cas limite)",
+      "category": "Contrat de données",
+      "killed": true,
+      "first_failing_test": null,
+      "seconds": 7.403012634999982,
+      "killed_initial": false,
+      "killed_after_strengthening": true,
+      "first_failing_test_after": "tests/test_preprocessing.py::test_missing_fraction_limit_is_inclusive_at_exactly_five_percent"
+    },
+    {
+      "id": "M22",
+      "file": "app/evaluation.py",
+      "description": "Intervalle de Wilson remplacé par celui de Wald",
+      "category": "Métriques",
+      "killed": true,
+      "first_failing_test": "tests/test_evaluation.py::test_wilson_interval_known_values",
+      "seconds": 2.417957824000041,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M23",
+      "file": "app/monitoring.py",
+      "description": "Alerte sur le taux de transactions signalées désactivée",
+      "category": "Surveillance",
+      "killed": true,
+      "first_failing_test": null,
+      "seconds": 7.141394878999961,
+      "killed_initial": false,
+      "killed_after_strengthening": true,
+      "first_failing_test_after": "tests/test_monitoring.py::test_window_report_flags_a_collapse_of_the_alert_rate"
+    },
+    {
+      "id": "M24",
+      "file": "app/preprocessing.py",
+      "description": "Dédoublonnage supprimant aussi l'original",
+      "category": "Partition",
+      "killed": true,
+      "first_failing_test": "tests/test_integration.py::test_deduplicate_removes_exact_duplicates_so_none_cross_partitions",
+      "seconds": 3.010171370000023,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    },
+    {
+      "id": "M25",
+      "file": "app/prediction.py",
+      "description": "Limite de taille de requête rendue inopérante",
+      "category": "Sécurité",
+      "killed": true,
+      "first_failing_test": "tests/test_prediction.py::test_handler_rejects_oversized_payload",
+      "seconds": 5.166002359000004,
+      "killed_initial": true,
+      "killed_after_strengthening": true
+    }
+  ],
+  "total": 25,
+  "killed": 25,
+  "survived": [],
+  "mutation_score": 1.0,
+  "initial_killed": 22,
+  "initial_survivors": [
+    "M19",
+    "M21",
+    "M23"
+  ],
+  "initial_score": 0.88
+}

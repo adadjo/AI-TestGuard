@@ -1,0 +1,467 @@
+{
+  "baseline": {
+    "created_utc": "2026-11-02T01:46:37+00:00",
+    "code_version": "1.0.0",
+    "git_commit": null,
+    "model": {
+      "name": "logreg",
+      "params": {
+        "C": 0.1,
+        "class_weight": null
+      },
+      "threshold": 0.03186407586247419,
+      "max_fpr": 0.0008,
+      "features": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "Amount"
+      ]
+    },
+    "seeds": {
+      "split": 42,
+      "model": 42
+    },
+    "dataset": {
+      "n_rows": 283726,
+      "n_columns": 31,
+      "n_fraud": 473,
+      "fraud_rate": 0.001667101358352777,
+      "content_sha256": "6d0da1ed12a8fa1013f1f3af51a55de126f91249a9ac085d0253a26a56574669",
+      "file_sha256": "76274b691b16a6c49d3f159c883398e03ccd6d1ee12d9d8ee38f4b4b98551a89",
+      "source": "Kaggle mlg-ulb/creditcardfraud",
+      "duplicates_removed": 1081,
+      "split_sizes": {
+        "train": {
+          "n": 198608,
+          "n_fraud": 331
+        },
+        "val": {
+          "n": 42559,
+          "n_fraud": 71
+        },
+        "test": {
+          "n": 42559,
+          "n_fraud": 71
+        }
+      },
+      "validation_set_sha256": "98f089228bbe7c139327cc42976b0a1b4bd4890ce41b33ac795368f6b0ff18e6"
+    },
+    "validation_metrics": {
+      "average_precision": 0.7648236605513667,
+      "roc_auc": 0.9831461940537974,
+      "recall": 0.8591549295774648,
+      "precision": 0.6703296703296703,
+      "fpr": 0.0007060817171907362
+    },
+    "tolerances": {
+      "average_precision": {
+        "warn": 0.01,
+        "fail": 0.02,
+        "higher_is_better": true
+      },
+      "roc_auc": {
+        "warn": 0.005,
+        "fail": 0.01,
+        "higher_is_better": true
+      },
+      "recall": {
+        "warn": 0.015,
+        "fail": 0.03,
+        "higher_is_better": true
+      },
+      "precision": {
+        "warn": 0.03,
+        "fail": 0.05,
+        "higher_is_better": true
+      },
+      "fpr": {
+        "warn": 0.0001,
+        "fail": 0.0002,
+        "higher_is_better": false
+      }
+    },
+    "environment": {
+      "python": "3.12.3",
+      "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+      "machine": "x86_64",
+      "libraries": {
+        "numpy": "2.4.4",
+        "pandas": "3.0.2",
+        "scikit-learn": "1.8.0",
+        "scipy": "1.17.1",
+        "joblib": "1.5.3",
+        "matplotlib": "3.10.8",
+        "pytest": "9.2.0",
+        "hypothesis": "6.170.14",
+        "psutil": "7.2.2"
+      }
+    }
+  },
+  "same_validation_set": true,
+  "environment_differences": {},
+  "candidates": [
+    {
+      "id": "C1",
+      "version": "v1.0.1",
+      "title": "Refactoring neutre : max_iter 2000 → 5000 (même optimum)",
+      "expected": "ACCEPTER",
+      "model": "logreg",
+      "params": {
+        "C": 0.1,
+        "class_weight": null,
+        "max_iter": 5000
+      },
+      "threshold": 0.03186407586247419,
+      "metrics": {
+        "average_precision": 0.7648236605513667,
+        "roc_auc": 0.9831461940537974,
+        "recall": 0.8591549295774648,
+        "precision": 0.6703296703296703,
+        "fpr": 0.0007060817171907362
+      },
+      "n_fraud_validation": 71,
+      "comparison": {
+        "decision": "ACCEPTER",
+        "details": {
+          "average_precision": {
+            "baseline": 0.7648236605513667,
+            "candidate": 0.7648236605513667,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "roc_auc": {
+            "baseline": 0.9831461940537974,
+            "candidate": 0.9831461940537974,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "recall": {
+            "baseline": 0.8591549295774648,
+            "candidate": 0.8591549295774648,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "precision": {
+            "baseline": 0.6703296703296703,
+            "candidate": 0.6703296703296703,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "fpr": {
+            "baseline": 0.0007060817171907362,
+            "candidate": 0.0007060817171907362,
+            "delta": 0.0,
+            "degradation": 0.0,
+            "status": "ok"
+          }
+        },
+        "reasons": []
+      },
+      "matches_expectation": true
+    },
+    {
+      "id": "C2",
+      "version": "v1.1.0",
+      "title": "Régularisation 10 fois plus forte (C ÷ 10)",
+      "expected": null,
+      "model": "logreg",
+      "params": {
+        "C": 0.01,
+        "class_weight": null
+      },
+      "threshold": 0.025717783099661023,
+      "metrics": {
+        "average_precision": 0.7616289335825767,
+        "roc_auc": 0.9830606686627011,
+        "recall": 0.8591549295774648,
+        "precision": 0.6777777777777778,
+        "fpr": 0.000682545659951045
+      },
+      "n_fraud_validation": 71,
+      "comparison": {
+        "decision": "ACCEPTER",
+        "details": {
+          "average_precision": {
+            "baseline": 0.7648236605513667,
+            "candidate": 0.7616289335825767,
+            "delta": -0.0031947269687900848,
+            "degradation": 0.0031947269687900848,
+            "status": "ok"
+          },
+          "roc_auc": {
+            "baseline": 0.9831461940537974,
+            "candidate": 0.9830606686627011,
+            "delta": -8.55253910962972e-05,
+            "degradation": 8.55253910962972e-05,
+            "status": "ok"
+          },
+          "recall": {
+            "baseline": 0.8591549295774648,
+            "candidate": 0.8591549295774648,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "precision": {
+            "baseline": 0.6703296703296703,
+            "candidate": 0.6777777777777778,
+            "delta": 0.007448107448107533,
+            "degradation": -0.007448107448107533,
+            "status": "ok"
+          },
+          "fpr": {
+            "baseline": 0.0007060817171907362,
+            "candidate": 0.000682545659951045,
+            "delta": -2.3536057239691177e-05,
+            "degradation": -2.3536057239691177e-05,
+            "status": "ok"
+          }
+        },
+        "reasons": []
+      },
+      "matches_expectation": null
+    },
+    {
+      "id": "C3",
+      "version": "v1.2.0",
+      "title": "Time ajouté aux variables du modèle",
+      "expected": null,
+      "model": "logreg",
+      "params": {
+        "C": 0.1,
+        "class_weight": null
+      },
+      "threshold": 0.032113749894907465,
+      "metrics": {
+        "average_precision": 0.7645493817693607,
+        "roc_auc": 0.9834737098925695,
+        "recall": 0.8591549295774648,
+        "precision": 0.6703296703296703,
+        "fpr": 0.0007060817171907362
+      },
+      "n_fraud_validation": 71,
+      "comparison": {
+        "decision": "ACCEPTER",
+        "details": {
+          "average_precision": {
+            "baseline": 0.7648236605513667,
+            "candidate": 0.7645493817693607,
+            "delta": -0.0002742787820060322,
+            "degradation": 0.0002742787820060322,
+            "status": "ok"
+          },
+          "roc_auc": {
+            "baseline": 0.9831461940537974,
+            "candidate": 0.9834737098925695,
+            "delta": 0.00032751583877210777,
+            "degradation": -0.00032751583877210777,
+            "status": "ok"
+          },
+          "recall": {
+            "baseline": 0.8591549295774648,
+            "candidate": 0.8591549295774648,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "precision": {
+            "baseline": 0.6703296703296703,
+            "candidate": 0.6703296703296703,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "fpr": {
+            "baseline": 0.0007060817171907362,
+            "candidate": 0.0007060817171907362,
+            "delta": 0.0,
+            "degradation": 0.0,
+            "status": "ok"
+          }
+        },
+        "reasons": []
+      },
+      "matches_expectation": null
+    },
+    {
+      "id": "C4",
+      "version": "v1.3.0",
+      "title": "Fuite accidentelle : entraînement sur train + validation",
+      "expected": null,
+      "model": "logreg",
+      "params": {
+        "C": 0.1,
+        "class_weight": null
+      },
+      "threshold": 0.03727009254746488,
+      "metrics": {
+        "average_precision": 0.7692792398371705,
+        "roc_auc": 0.9863129539807098,
+        "recall": 0.8591549295774648,
+        "precision": 0.6931818181818182,
+        "fpr": 0.0006354735454716626
+      },
+      "n_fraud_validation": 71,
+      "comparison": {
+        "decision": "ACCEPTER",
+        "details": {
+          "average_precision": {
+            "baseline": 0.7648236605513667,
+            "candidate": 0.7692792398371705,
+            "delta": 0.004455579285803757,
+            "degradation": -0.004455579285803757,
+            "status": "ok"
+          },
+          "roc_auc": {
+            "baseline": 0.9831461940537974,
+            "candidate": 0.9863129539807098,
+            "delta": 0.003166759926912399,
+            "degradation": -0.003166759926912399,
+            "status": "ok"
+          },
+          "recall": {
+            "baseline": 0.8591549295774648,
+            "candidate": 0.8591549295774648,
+            "delta": 0.0,
+            "degradation": -0.0,
+            "status": "ok"
+          },
+          "precision": {
+            "baseline": 0.6703296703296703,
+            "candidate": 0.6931818181818182,
+            "delta": 0.022852147852147953,
+            "degradation": -0.022852147852147953,
+            "status": "ok"
+          },
+          "fpr": {
+            "baseline": 0.0007060817171907362,
+            "candidate": 0.0006354735454716626,
+            "delta": -7.060817171907353e-05,
+            "degradation": -7.060817171907353e-05,
+            "status": "ok"
+          }
+        },
+        "reasons": []
+      },
+      "matches_expectation": null
+    },
+    {
+      "id": "C5",
+      "version": "v2.0.0",
+      "title": "Remplacement par un arbre de décision de profondeur 3",
+      "expected": "REJETER",
+      "model": "tree",
+      "params": {
+        "max_depth": 3,
+        "min_samples_leaf": 20,
+        "class_weight": "balanced"
+      },
+      "threshold": 1.0,
+      "metrics": {
+        "average_precision": 0.4099663215215596,
+        "roc_auc": 0.9721818720646228,
+        "recall": 0.0,
+        "precision": 0.0,
+        "fpr": 0.0
+      },
+      "n_fraud_validation": 71,
+      "comparison": {
+        "decision": "REJETER",
+        "details": {
+          "average_precision": {
+            "baseline": 0.7648236605513667,
+            "candidate": 0.4099663215215596,
+            "delta": -0.35485733902980715,
+            "degradation": 0.35485733902980715,
+            "status": "fail"
+          },
+          "roc_auc": {
+            "baseline": 0.9831461940537974,
+            "candidate": 0.9721818720646228,
+            "delta": -0.01096432198917463,
+            "degradation": 0.01096432198917463,
+            "status": "fail"
+          },
+          "recall": {
+            "baseline": 0.8591549295774648,
+            "candidate": 0.0,
+            "delta": -0.8591549295774648,
+            "degradation": 0.8591549295774648,
+            "status": "fail"
+          },
+          "precision": {
+            "baseline": 0.6703296703296703,
+            "candidate": 0.0,
+            "delta": -0.6703296703296703,
+            "degradation": 0.6703296703296703,
+            "status": "fail"
+          },
+          "fpr": {
+            "baseline": 0.0007060817171907362,
+            "candidate": 0.0,
+            "delta": -0.0007060817171907362,
+            "degradation": -0.0007060817171907362,
+            "status": "ok"
+          }
+        },
+        "reasons": [
+          "average_precision : dégradation de 0.3549 (fail).",
+          "roc_auc : dégradation de 0.0110 (fail).",
+          "recall : dégradation de 0.8592 (fail).",
+          "precision : dégradation de 0.6703 (fail)."
+        ]
+      },
+      "matches_expectation": true
+    }
+  ],
+  "gate_selftest": [
+    {
+      "case": "C1 refactoring neutre",
+      "expected": "ACCEPTER",
+      "obtained": "ACCEPTER"
+    },
+    {
+      "case": "C5 arbre de profondeur 3",
+      "expected": "REJETER",
+      "obtained": "REJETER"
+    },
+    {
+      "case": "Gain de PR-AUC de +0,08 (suspect)",
+      "expected": "INVESTIGUER",
+      "obtained": "INVESTIGUER"
+    }
+  ],
+  "criteria_feed": {
+    "regression_gate_failures": 0
+  }
+}

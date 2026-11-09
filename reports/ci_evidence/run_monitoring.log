@@ -1,0 +1,6 @@
+1 Normale naïve: ['data_drift', 'score_drift'] | appariée: ['data_drift', 'score_drift'] | glissante: ['data_drift', 'score_drift'] | rappel différé=0.62
+2 Normale naïve: ['data_drift', 'score_drift'] | appariée: ['data_drift', 'score_drift'] | glissante: ['score_drift'] | rappel différé=0.76
+3 Dérive de données naïve: ['data_drift', 'score_drift'] | appariée: ['data_drift', 'score_drift', 'alert_rate'] | glissante: [] | rappel différé=0.82
+4 Dérive de données naïve: ['data_drift', 'score_drift'] | appariée: ['data_drift', 'score_drift', 'alert_rate'] | glissante: ['data_drift'] | rappel différé=0.82
+5 Dérive de concept naïve: ['data_drift', 'score_drift'] | appariée: ['data_drift', 'score_drift', 'alert_rate'] | glissante: ['data_drift'] | rappel différé=0.00
+6 Incident de qualité naïve: ['data_drift', 'score_drift', 'invalid_inputs'] | appariée: ['data_drift', 'score_drift', 'alert_rate', 'invalid_inputs'] | glissante: ['invalid_inputs'] | rappel différé=0.46

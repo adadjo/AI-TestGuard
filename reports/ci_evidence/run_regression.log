@@ -1,0 +1,6 @@
+C1 v1.0.1: ACCEPTER  []
+C2 v1.1.0: ACCEPTER  []
+C3 v1.2.0: ACCEPTER  []
+C4 v1.3.0: ACCEPTER  []
+C5 v2.0.0: REJETER  ['average_precision : dégradation de 0.3549 (fail).', 'roc_auc : dégradation de 0.0110 (fail).']
+auto-test de la barrière : [{'case': 'C1 refactoring neutre', 'expected': 'ACCEPTER', 'obtained': 'ACCEPTER'}, {'case': 'C5 arbre de profondeur 3', 'expected': 'REJETER', 'obtained': 'REJETER'}, {'case': 'Gain de PR-AUC de +0,08 (suspect)', 'expected': 'INVESTIGUER', 'obtained': 'INVESTIGUER'}] -> échecs : 0

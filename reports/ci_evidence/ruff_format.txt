@@ -1,0 +1,4 @@
+$ ruff format --check .
+40 files already formatted
+
+[code de sortie : 0]

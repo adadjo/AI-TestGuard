@@ -1,0 +1,43 @@
+robustesse : logreg
+12366 valeur(s) manquante(s) : imputation par la médiane d'entraînement.
+36872 valeur(s) manquante(s) : imputation par la médiane d'entraînement.
+20 montant(s) supérieur(s) au seuil d'alerte 30000.
+request_id=38f0759d4712 status=422 error=missing_fields
+request_id=050d3fd97d19 status=422 error=unexpected_fields
+request_id=23c8619cf22b status=422 error=invalid_types
+request_id=662249e9cb52 status=422 error=invalid_types
+request_id=1e6b5995bfe4 status=422 error=invalid_types
+request_id=eed9160176c5 status=400 error=invalid_json
+request_id=c3df2e14387a status=400 error=invalid_json
+request_id=06d6a91a035a status=422 error=non_finite_values
+request_id=2c33982dc4fc status=422 error=contract_violation
+request_id=78d890d02022 status=400 error=invalid_json
+request_id=86d3bce23131 status=400 error=invalid_json
+request_id=a176c85c97b4 status=400 error=payload_must_be_object
+request_id=d0fafc8fd76d status=413 error=payload_too_large
+1 montant(s) supérieur(s) au seuil d'alerte 30000.
+1 montant(s) supérieur(s) au seuil d'alerte 30000.
+8 montant(s) supérieur(s) au seuil d'alerte 30000.
+8 montant(s) supérieur(s) au seuil d'alerte 30000.
+robustesse : tree
+12366 valeur(s) manquante(s) : imputation par la médiane d'entraînement.
+36872 valeur(s) manquante(s) : imputation par la médiane d'entraînement.
+20 montant(s) supérieur(s) au seuil d'alerte 30000.
+request_id=95b29d7f9f76 status=422 error=missing_fields
+request_id=be94915ae7b1 status=422 error=unexpected_fields
+request_id=a71b5a4ada08 status=422 error=invalid_types
+request_id=9173113deed1 status=422 error=invalid_types
+request_id=93993902ed48 status=422 error=invalid_types
+request_id=b5dd73c099c2 status=400 error=invalid_json
+request_id=e55091ff067f status=400 error=invalid_json
+request_id=abc9302867ed status=422 error=non_finite_values
+request_id=e7dc7e12078f status=422 error=contract_violation
+request_id=e1a7a1176c4c status=400 error=invalid_json
+request_id=88e802b6f6b5 status=400 error=invalid_json
+request_id=1acd032660f7 status=400 error=payload_must_be_object
+request_id=50101ca626a3 status=413 error=payload_too_large
+1 montant(s) supérieur(s) au seuil d'alerte 30000.
+1 montant(s) supérieur(s) au seuil d'alerte 30000.
+8 montant(s) supérieur(s) au seuil d'alerte 30000.
+8 montant(s) supérieur(s) au seuil d'alerte 30000.
+criteria_feed: {'perturbation_flip_rate': 1.879743415023849e-05, 'perturbation_recall_drop': 0.0, 'invalid_inputs_accepted': 0}

@@ -1,0 +1,502 @@
+{
+  "design": {
+    "train_fraction": 0.4,
+    "reference_fraction": 0.15,
+    "n_windows": 6,
+    "model": "logreg",
+    "threshold": 0.038127100964827965,
+    "reference_alert_rate": 0.002420169646843206,
+    "reference_rows": 42559,
+    "psi_warn": 0.1,
+    "psi_alert": 0.25,
+    "alert_rate_z": 3.0,
+    "reference_val_recall": 0.7291666666666666,
+    "reference_val_fpr": 0.0007771471634128535,
+    "span_hours": 47.99777777777778,
+    "noise_floor_psi": 0.0004538485498172908
+  },
+  "windows": [
+    {
+      "window": 1,
+      "scenario": "Normale",
+      "injected": "aucun incident",
+      "n": 21279,
+      "hours_of_day": [
+        6.2,
+        10.3
+      ],
+      "matched_reference_rows": 20203,
+      "matched_reference_alert_rate": 0.0035638271543830123,
+      "naive": {
+        "max_feature_psi": 1.1372806195360181,
+        "n_features_in_alert": 5,
+        "score_psi": 0.13070066980499598,
+        "alert_rate": 0.0025377132384040604,
+        "alert_rate_z": 0.3489617522794047,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "5 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.13 > 0.1"
+          }
+        ]
+      },
+      "matched": {
+        "max_feature_psi": 1.6388443903647478,
+        "n_features_in_alert": 8,
+        "score_psi": 0.17324200485059849,
+        "alert_rate": 0.0025377132384040604,
+        "alert_rate_z": -2.5118177550016556,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "8 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.17 > 0.1"
+          }
+        ]
+      },
+      "trailing": {
+        "max_feature_psi": 0.44780632744156923,
+        "n_features_in_alert": 6,
+        "score_psi": 0.34279716981784963,
+        "alert_rate": 0.0025377132384040604,
+        "alert_rate_z": -2.7224591667097076,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "6 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "alert",
+            "message": "PSI du score = 0.34 > 0.25"
+          }
+        ]
+      },
+      "alert_rate": 0.0025377132384040604,
+      "trailing_reference_alert_rate": 0.003665585788805865,
+      "n_fraud": 13,
+      "delayed_recall": 0.6153846153846154,
+      "delayed_recall_ci": [
+        0.3552289133643685,
+        0.8229029231436777
+      ],
+      "delayed_precision": 0.14814814814814814,
+      "delayed_fpr": 0.002163077212451801,
+      "delayed_ap": 0.2971569551860439
+    },
+    {
+      "window": 2,
+      "scenario": "Normale",
+      "injected": "aucun incident",
+      "n": 21280,
+      "hours_of_day": [
+        10.3,
+        12.9
+      ],
+      "matched_reference_rows": 21512,
+      "matched_reference_alert_rate": 0.0023707698029007064,
+      "naive": {
+        "max_feature_psi": 0.9855012317826819,
+        "n_features_in_alert": 5,
+        "score_psi": 0.31337133901148506,
+        "alert_rate": 0.002772556390977444,
+        "alert_rate_z": 1.0461853641093406,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "5 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "alert",
+            "message": "PSI du score = 0.31 > 0.25"
+          }
+        ]
+      },
+      "matched": {
+        "max_feature_psi": 1.48761293731634,
+        "n_features_in_alert": 8,
+        "score_psi": 0.16576872642779786,
+        "alert_rate": 0.002772556390977444,
+        "alert_rate_z": 1.2051801536397566,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "8 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.17 > 0.1"
+          }
+        ]
+      },
+      "trailing": {
+        "max_feature_psi": 0.1577693452326235,
+        "n_features_in_alert": 0,
+        "score_psi": 0.10125575281092165,
+        "alert_rate": 0.002772556390977444,
+        "alert_rate_z": 0.6809170340887027,
+        "alerts": [
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.10 > 0.1"
+          }
+        ]
+      },
+      "alert_rate": 0.002772556390977444,
+      "trailing_reference_alert_rate": 0.0025377132384040604,
+      "n_fraud": 21,
+      "delayed_recall": 0.7619047619047619,
+      "delayed_recall_ci": [
+        0.5490882614178733,
+        0.8937198704460038
+      ],
+      "delayed_precision": 0.2711864406779661,
+      "delayed_fpr": 0.0020226727503645514,
+      "delayed_ap": 0.5476974258283009
+    },
+    {
+      "window": 3,
+      "scenario": "Dérive de données",
+      "injected": "Amount × 1,5 (inflation / nouveau marchand)",
+      "n": 21279,
+      "hours_of_day": [
+        12.9,
+        15.5
+      ],
+      "matched_reference_rows": 20407,
+      "matched_reference_alert_rate": 0.001274072622139462,
+      "naive": {
+        "max_feature_psi": 1.0042109327885644,
+        "n_features_in_alert": 7,
+        "score_psi": 0.2867907724567701,
+        "alert_rate": 0.0030546548240048873,
+        "alert_rate_z": 1.8836506208253858,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "7 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "alert",
+            "message": "PSI du score = 0.29 > 0.25"
+          }
+        ]
+      },
+      "matched": {
+        "max_feature_psi": 1.5200518507716534,
+        "n_features_in_alert": 8,
+        "score_psi": 0.18787982631183658,
+        "alert_rate": 0.0030546548240048873,
+        "alert_rate_z": 7.281441778177101,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "8 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.19 > 0.1"
+          },
+          {
+            "name": "alert_rate",
+            "level": "alert",
+            "message": "taux d'alertes 0.3055% vs référence 0.1274% (z = +7.3)"
+          }
+        ]
+      },
+      "trailing": {
+        "max_feature_psi": 0.06660626367363706,
+        "n_features_in_alert": 0,
+        "score_psi": 0.0022037450803993794,
+        "alert_rate": 0.0030546548240048873,
+        "alert_rate_z": 0.7825984369895844,
+        "alerts": []
+      },
+      "alert_rate": 0.0030546548240048873,
+      "trailing_reference_alert_rate": 0.002772556390977444,
+      "n_fraud": 22,
+      "delayed_recall": 0.8181818181818182,
+      "delayed_recall_ci": [
+        0.6148339238492879,
+        0.9269311546747105
+      ],
+      "delayed_precision": 0.27692307692307694,
+      "delayed_fpr": 0.002211036364491697,
+      "delayed_ap": 0.4473522983226534
+    },
+    {
+      "window": 4,
+      "scenario": "Dérive de données",
+      "injected": "décalage de +0,5 σ sur 8 composantes V",
+      "n": 21280,
+      "hours_of_day": [
+        15.5,
+        18.0
+      ],
+      "matched_reference_rows": 19447,
+      "matched_reference_alert_rate": 0.0018511852727927187,
+      "naive": {
+        "max_feature_psi": 1.509382938836831,
+        "n_features_in_alert": 7,
+        "score_psi": 0.32615772724641545,
+        "alert_rate": 0.0034774436090225565,
+        "alert_rate_z": 3.1388937396140273,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "7 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "alert",
+            "message": "PSI du score = 0.33 > 0.25"
+          }
+        ]
+      },
+      "matched": {
+        "max_feature_psi": 1.6328288388676142,
+        "n_features_in_alert": 11,
+        "score_psi": 0.16781279611483316,
+        "alert_rate": 0.0034774436090225565,
+        "alert_rate_z": 5.518902944301618,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "11 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.17 > 0.1"
+          },
+          {
+            "name": "alert_rate",
+            "level": "alert",
+            "message": "taux d'alertes 0.3477% vs référence 0.1851% (z = +5.5)"
+          }
+        ]
+      },
+      "trailing": {
+        "max_feature_psi": 1.9271651926588074,
+        "n_features_in_alert": 6,
+        "score_psi": 0.004888184511911479,
+        "alert_rate": 0.0034774436090225565,
+        "alert_rate_z": 1.1176157782033762,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "6 variable(s) avec PSI > 0.25"
+          }
+        ]
+      },
+      "alert_rate": 0.0034774436090225565,
+      "trailing_reference_alert_rate": 0.0030546548240048873,
+      "n_fraud": 33,
+      "delayed_recall": 0.8181818181818182,
+      "delayed_recall_ci": [
+        0.6561176822135057,
+        0.9138923184127576
+      ],
+      "delayed_precision": 0.36486486486486486,
+      "delayed_fpr": 0.002212076999105756,
+      "delayed_ap": 0.6978780904556731
+    },
+    {
+      "window": 5,
+      "scenario": "Dérive de concept",
+      "injected": "les fraudes ressemblent désormais à des transactions légitimes",
+      "n": 21279,
+      "hours_of_day": [
+        18.0,
+        20.7
+      ],
+      "matched_reference_rows": 22467,
+      "matched_reference_alert_rate": 0.0008901945074998888,
+      "naive": {
+        "max_feature_psi": 1.1264936707474487,
+        "n_features_in_alert": 7,
+        "score_psi": 0.3146902599522277,
+        "alert_rate": 0.001738803515202782,
+        "alert_rate_z": -2.022830135473475,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "7 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "alert",
+            "message": "PSI du score = 0.31 > 0.25"
+          }
+        ]
+      },
+      "matched": {
+        "max_feature_psi": 1.6654440120998166,
+        "n_features_in_alert": 10,
+        "score_psi": 0.19392189772414062,
+        "alert_rate": 0.001738803515202782,
+        "alert_rate_z": 4.150822658777314,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "10 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.19 > 0.1"
+          },
+          {
+            "name": "alert_rate",
+            "level": "alert",
+            "message": "taux d'alertes 0.1739% vs référence 0.0890% (z = +4.2)"
+          }
+        ]
+      },
+      "trailing": {
+        "max_feature_psi": 3.905856687527816,
+        "n_features_in_alert": 7,
+        "score_psi": 0.002671977632559003,
+        "alert_rate": 0.001738803515202782,
+        "alert_rate_z": -4.30835700214992,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "7 variable(s) avec PSI > 0.25"
+          }
+        ]
+      },
+      "alert_rate": 0.001738803515202782,
+      "trailing_reference_alert_rate": 0.0034774436090225565,
+      "n_fraud": 39,
+      "delayed_recall": 0.0,
+      "delayed_recall_ci": [
+        0.0,
+        0.08966685499529356
+      ],
+      "delayed_precision": 0.0,
+      "delayed_fpr": 0.0017419962335216573,
+      "delayed_ap": 0.002186525700396003
+    },
+    {
+      "window": 6,
+      "scenario": "Incident de qualité",
+      "injected": "2 % de lignes avec valeur infinie + 3 % de cellules manquantes",
+      "n": 20855,
+      "hours_of_day": [
+        20.7,
+        24.0
+      ],
+      "matched_reference_rows": 27585,
+      "matched_reference_alert_rate": 0.0014500634402755121,
+      "naive": {
+        "max_feature_psi": 1.0557978566869863,
+        "n_features_in_alert": 7,
+        "score_psi": 0.30922070000268187,
+        "alert_rate": 0.0024934068568688563,
+        "alert_rate_z": 0.2152485099690963,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "7 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "alert",
+            "message": "PSI du score = 0.31 > 0.25"
+          },
+          {
+            "name": "invalid_inputs",
+            "level": "alert",
+            "message": "2.00% d'entrées invalides"
+          }
+        ]
+      },
+      "matched": {
+        "max_feature_psi": 1.5901450329028521,
+        "n_features_in_alert": 10,
+        "score_psi": 0.13785921983492005,
+        "alert_rate": 0.0024934068568688563,
+        "alert_rate_z": 3.9596243051674604,
+        "alerts": [
+          {
+            "name": "data_drift",
+            "level": "alert",
+            "message": "10 variable(s) avec PSI > 0.25"
+          },
+          {
+            "name": "score_drift",
+            "level": "warn",
+            "message": "PSI du score = 0.14 > 0.1"
+          },
+          {
+            "name": "alert_rate",
+            "level": "alert",
+            "message": "taux d'alertes 0.2493% vs référence 0.1450% (z = +4.0)"
+          },
+          {
+            "name": "invalid_inputs",
+            "level": "alert",
+            "message": "2.00% d'entrées invalides"
+          }
+        ]
+      },
+      "trailing": {
+        "max_feature_psi": 0.023075071458891976,
+        "n_features_in_alert": 0,
+        "score_psi": 0.00293687512366777,
+        "alert_rate": 0.0024934068568688563,
+        "alert_rate_z": 2.6156309732501053,
+        "alerts": [
+          {
+            "name": "invalid_inputs",
+            "level": "alert",
+            "message": "2.00% d'entrées invalides"
+          }
+        ]
+      },
+      "alert_rate": 0.0024934068568688563,
+      "trailing_reference_alert_rate": 0.001738803515202782,
+      "n_fraud": 13,
+      "delayed_recall": 0.46153846153846156,
+      "delayed_recall_ci": [
+        0.23206067674961361,
+        0.7085620444143711
+      ],
+      "delayed_precision": 0.11538461538461539,
+      "delayed_fpr": 0.0022070818539487573,
+      "delayed_ap": 0.10862389175723529
+    }
+  ],
+  "figures": {
+    "monitoring": "reports/figures/fig_monitoring.png"
+  }
+}

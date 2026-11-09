@@ -1,0 +1,12 @@
+graine 42: R1→tree   (ÉCHEC) | R2→logreg (ok) | R3→logreg (ok) | 9 s
+graine  0: R1→logreg (ok) | R2→logreg (ok) | R3→None   (ÉCHEC) | 10 s
+graine  1: R1→tree   (ÉCHEC) | R2→logreg (ÉCHEC) | R3→logreg (ÉCHEC) | 11 s
+graine  2: R1→logreg (ok) | R2→logreg (ok) | R3→None   (ÉCHEC) | 11 s
+graine  3: R1→logreg (ok) | R2→logreg (ok) | R3→logreg (ok) | 11 s
+graine  4: R1→tree   (ÉCHEC) | R2→tree   (ÉCHEC) | R3→logreg (ok) | 9 s
+graine  5: R1→logreg (ok) | R2→tree   (ÉCHEC) | R3→None   (ÉCHEC) | 9 s
+graine  6: R1→logreg (ok) | R2→logreg (ok) | R3→logreg (ok) | 10 s
+graine  7: R1→logreg (ok) | R2→logreg (ok) | R3→logreg (ok) | 9 s
+graine  8: R1→tree   (ÉCHEC) | R2→logreg (ok) | R3→logreg (ok) | 10 s
+graine  9: R1→logreg (ok) | R2→logreg (ok) | R3→logreg (ok) | 9 s
+{"R1": {"picks": {"logreg": 7, "tree": 3, "null": 0}, "pick_passes": 7, "n": 10}, "R2": {"picks": {"logreg": 8, "tree": 2, "null": 0}, "pick_passes": 7, "n": 10}, "R3": {"picks": {"logreg": 7, "tree": 0, "null": 3}, "pick_passes": 6, "n": 10}, "model_passes": {"logreg": 9, "tree": 0}}

@@ -1,0 +1,24 @@
+# Données (jeu Kaggle non versionné : voir data/README.md)
+data/*.csv
+data/*.zip
+!data/sample_*.csv
+
+# Artefacts de modèle et secrets
+*.joblib
+models/*.joblib
+.env
+kaggle.json
+
+# Python / outils
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+coverage.xml
+htmlcov/
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
