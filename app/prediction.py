@@ -52,7 +52,7 @@ def predict_fraud(model: Any, X: pd.DataFrame, threshold: float = 0.5) -> pd.Dat
     if not np.isfinite(proba).all() or (proba < 0).any() or (proba > 1).any():
         raise PredictionError("Probabilité non valide produite par le modèle.")
     return pd.DataFrame(
-        {"fraud_probability": proba, "is_fraud": (proba >= thr).astype("int8")},
+        {"fraud_probability": proba, "is_fraud": (proba > thr).astype("int8")},
         index=X.index,
     )
 
